@@ -9,6 +9,4 @@ public class CinemaDto {
     private String cinemaName;
     private Integer cinemaTel;
     private String cinemaAdd;
-    private Integer cinemaSeat;
-    private Integer cinemaPlayNum;
 }
