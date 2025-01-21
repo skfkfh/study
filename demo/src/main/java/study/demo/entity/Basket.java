@@ -1,9 +1,6 @@
 package study.demo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -11,9 +8,8 @@ import lombok.Data;
 @Table(name = "basket")
 public class Basket {
 
-    @Id
-    @Column(name = "USER_ID")
-    private String userId;
+    @EmbeddedId
+    private BasketId id;
 
     @Column(name = "BASKET_MOVIE_TITLE")
     private String basketMovieTitle;

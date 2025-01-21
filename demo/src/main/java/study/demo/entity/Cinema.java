@@ -3,10 +3,12 @@ package study.demo.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "cinema")
 public class Cinema {
 
     @Id
@@ -22,9 +24,4 @@ public class Cinema {
     @Column(name = "CINEMA_ADD")
     private String cinemaAdd;
 
-    @Column(name = "CINEMA_SEAT")
-    private Integer cinemaSeat;
-
-    @Column(name = "CINEMA_PLAY_NUM")
-    private Integer cinemaPlayNum;
 }
