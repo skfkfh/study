@@ -3,11 +3,12 @@ package study.demo.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.demo.dto.BasketDto;
-import study.demo.entity.Basket;
+
+import study.demo.entity.BasketId;
 import study.demo.repository.Basket.BasketRepository;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -15,12 +16,10 @@ public class BasketServiceImpl implements BasketService{
 
     private final BasketRepository basketRepository;
 
-    public Basket getBasketDetail(String userId) {
-//
-//        Optional<Basket> basket = basketRepository.findById(userId);
-//        return basket.orElse(null);
+    @Override
+    public List<BasketDto> getBasketDetail(String userId) {
 
-        return null;
+        return basketRepository.getBasketUserInfo(userId);
     }
 
     @Override

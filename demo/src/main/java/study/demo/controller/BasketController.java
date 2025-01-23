@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import study.demo.dto.BasketDto;
-import study.demo.entity.Basket;
+import study.demo.entity.BasketId;
 import study.demo.service.BasketService;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class BasketController {
     private final BasketService basketService;
 
     @GetMapping("/detail")
-    public Basket getBasketDetail(@RequestParam String userId) {
+    public List<BasketDto> getBasketDetail(@RequestParam String userId) {
         return basketService.getBasketDetail(userId);
     }
 
