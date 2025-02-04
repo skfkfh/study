@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.demo.dto.BasketDto;
 
+import study.demo.entity.Basket;
 import study.demo.entity.BasketId;
 import study.demo.repository.Basket.BasketRepository;
 
@@ -26,5 +27,12 @@ public class BasketServiceImpl implements BasketService{
     public List<BasketDto> getBasketInfoIncludeUserName(String userId) {
 
         return basketRepository.getBasketInfoIncludeUserName(userId);
+    }
+
+    @Override
+    public List<BasketDto> addBasketUser(BasketDto basketDto) {
+
+//        return basketRepository.save(Basket);
+        return null;
     }
 }

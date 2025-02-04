@@ -4,7 +4,6 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import study.demo.dto.BasketDto;
 import study.demo.dto.QBasketDto;
-import study.demo.entity.Basket;
 
 import java.util.List;
 
@@ -78,4 +77,5 @@ public class BasketCustomImpl implements BasketCustom {
                 .where(basket.id.userId.eq(userId))
                 .fetch();
     }
+
 }

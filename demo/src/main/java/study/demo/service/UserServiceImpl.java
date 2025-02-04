@@ -3,36 +3,35 @@ package study.demo.service;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import study.demo.dao.UserDao;
+import study.demo.dto.UserDto;
 import study.demo.entity.User;
-import study.demo.repository.UserRepository;
+import study.demo.repository.User.UserRepository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-//    private final UserDao userDao;
     private final UserRepository userRepository;
 
-    public User getUserDetail(String userId) {
-        Optional<User> user = userRepository.findById(userId);
-        return user.orElse(null);
+
+    @Override
+    public List<UserDto> getUserDetail(String userId) {
+        return userRepository.getUserDetail(userId);
     }
 
-    @Transactional
-    public User updateUser(User user) {
-        Optional<User> findUser = userRepository.findById(user.getUserId());
+    @Override
+    public List<UserDto> updateUserDetail(UserDto userDto,String userId) {
+        List<UserDto> users = userRepository.getUserDetail(userId);
 
-        findUser.ifPresent(data -> {
-            data.setUserName(user.getUserName());
-            data.setUserAdd(user.getUserAdd());
-            data.setUserAge(user.getUserAge());
-            data.setUserPhoneNum(user.getUserPhoneNum());
-            data.setUserPwd(user.getUserPwd());
-        });
-
-        return user;
+        for (UserDto user : users) {
+            user.setUserPwd(user.getUserPwd());
+            user.setUserName(user.getUserName());
+            user.setUserPhoneNum(user.getUserPhoneNum());
+            user.setUserAdd(user.getUserAdd());
+            user.setUserAge(user.getUserAge());
+        }
+        return users;
     }
 }
