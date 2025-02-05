@@ -1,10 +1,8 @@
 package study.demo.service;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.demo.dto.UserDto;
-import study.demo.entity.User;
 import study.demo.repository.User.UserRepository;
 
 import java.util.List;
