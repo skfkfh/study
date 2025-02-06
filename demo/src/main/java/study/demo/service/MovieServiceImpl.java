@@ -13,19 +13,21 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class MovieServiceImpl implements MovieService{
-
     private final MovieRepository movieRepository;
 
     @Override
-    public List<Movie> getMovieInfo(String movieTitle) {
+    public MovieDto getMovieInfo(String movieTitle) {
+        Movie movie = movieRepository.findByMovieTitle(movieTitle);
+        MovieDto movieDto = new MovieDto(movie.getMovieNum(), movie.getMovieTitle(), movie.getMovieCost());
 
-        return movieRepository.findAllByTitle(movieTitle);
+        return movieDto;
     }
 
-    @Override
-    public Optional<MovieDto> getMovieInfoByNum(Integer movieNum) {
+//    @Override
+//    public Optional<MovieDto> getMovieInfoByNum(Integer movieNum) {
 
-        return movieRepository.findById(movieNum)
-                .map(MovieDto::toDto);
-    }
+//        return movieRepository.findById(movieNum)
+//                .map(MovieDto::toDto);
+//    }
 }
+

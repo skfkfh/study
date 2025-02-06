@@ -15,17 +15,15 @@ import java.util.Optional;
 @RequestMapping("/movie")
 @RequiredArgsConstructor
 public class MovieController {
-
     private final MovieService movieService;
 
     @GetMapping("/title")
-    public List<MovieDto> getMovieInfo(@RequestParam String movieTitle) {
-
+    public MovieDto getMovieInfo(@RequestParam String movieTitle) {
         return movieService.getMovieInfo(movieTitle);
     }
 
-    @GetMapping("/no")
-    public Optional<MovieDto> getMovieInfoByNo(@RequestParam Integer movieNum) {
-        return movieService.getMovieInfoByNum(movieNum);
-    }
+//    @GetMapping("/no")
+//    public Optional<MovieDto> getMovieInfoByNo(@RequestParam Integer movieNum) {
+//        return movieService.getMovieInfoByNum(movieNum);
+//    }
 }

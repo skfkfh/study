@@ -13,8 +13,8 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer movieNum;
 
-    @Column(name = "MOVIE_NAME")
-    private String movieName;
+    @Column(name = "MOVIE_TITLE")
+    private String movieTitle;
 
     @Column(name = "MOVIE_COST")
     private Integer movieCost;

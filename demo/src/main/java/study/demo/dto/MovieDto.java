@@ -11,9 +11,4 @@ public class MovieDto {
     private Integer movieNum;
     private String movieTitle;
     private Integer movieCost;
-
-    public static MovieDto toDto(Movie movie) {
-        MovieDto movieDto = new MovieDto(movie.getMovieNum(), movie.getMovieName(), movie.getMovieCost());
-        return movieDto;
-    }
 }
