@@ -10,5 +10,6 @@ import java.util.Optional;
 @Service
 public interface MovieService {
     MovieDto getMovieInfo(String movieTitle);
-//    Optional<MovieDto> getMovieInfoByNum(Integer movieNum);
+
+    MovieDto getMovieInfoByNum(Integer movieNum);
 }

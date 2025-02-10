@@ -22,8 +22,8 @@ public class MovieController {
         return movieService.getMovieInfo(movieTitle);
     }
 
-//    @GetMapping("/no")
-//    public Optional<MovieDto> getMovieInfoByNo(@RequestParam Integer movieNum) {
-//        return movieService.getMovieInfoByNum(movieNum);
-//    }
+    @GetMapping("/no")
+    public MovieDto getMovieInfoByNo(@RequestParam Integer movieNum) {
+        return movieService.getMovieInfoByNum(movieNum);
+    }
 }

@@ -20,7 +20,7 @@ public class User {
     private String userName;
 
     @Column(name = "USER_PHONE_NUM")
-    private Integer userPhoneNum;
+    private String userPhoneNum;
 
     @Column(name = "USER_ADD")
     private String userAdd;

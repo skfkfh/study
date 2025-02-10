@@ -25,5 +25,4 @@ public class UserController {
     public UserDto updateUser(@RequestBody UserDto userDto, String userId) {
         return userService.updateUserDetail(userDto,userId);
     }
-
 }

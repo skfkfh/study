@@ -7,8 +7,6 @@ import study.demo.dto.UserDto;
 import study.demo.entity.User;
 import study.demo.repository.User.UserRepository;
 
-import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -37,15 +35,16 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User Not Found"));
 
-        user.setUserPwd(user.getUserPwd());
-        user.setUserName(user.getUserName());
-        user.setUserPhoneNum(user.getUserPhoneNum());
-        user.setUserAdd(user.getUserAdd());
-        user.setUserAge(user.getUserAge());
+        user.setUserPwd(userDto.getUserPwd());
+        user.setUserName(userDto.getUserName());
+        user.setUserPhoneNum(userDto.getUserPhoneNum());
+        user.setUserAdd(userDto.getUserAdd());
+        user.setUserAge(userDto.getUserAge());
 
         User savedUser = userRepository.save(user);
 
-        UserDto saveUserDto = new UserDto(savedUser.getUserPwd(),
+        UserDto saveUserDto = new UserDto(
+                savedUser.getUserPwd(),
                 savedUser.getUserName(),
                 savedUser.getUserPhoneNum(),
                 savedUser.getUserAdd(),
