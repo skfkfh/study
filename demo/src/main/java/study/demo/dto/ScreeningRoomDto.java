@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class CinemaDto {
+public class ScreeningRoomDto {
 
+    private Integer roomId;
     private Integer cinemaNum;
-    private String cinemaName;
-    private Integer cinemaTel;
-    private String cinemaAdd;
+    private String roomName;
+    private Integer seatingCapacity;
 }
