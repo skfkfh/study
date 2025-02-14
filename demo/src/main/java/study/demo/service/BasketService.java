@@ -15,5 +15,7 @@ public interface BasketService {
 
     List<BasketDto> getBasketInfoIncludeUserName(String userId);
 
-    List<BasketDto> addBasketUser(BasketDto basketDto);
+    void addBasketMovie(BasketDto basketDto);
+
+    void deleteBasketByBasketNo(String basketNo);
 }

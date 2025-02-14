@@ -1,5 +1,6 @@
 package study.demo.service;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.demo.dto.BasketDto;
@@ -30,9 +31,20 @@ public class BasketServiceImpl implements BasketService{
     }
 
     @Override
-    public List<BasketDto> addBasketUser(BasketDto basketDto) {
+    @Transactional
+    public void addBasketMovie(BasketDto basketDto) {
+        BasketId basketId = new BasketId();
+        Basket basket = new Basket();
 
-//        return basketRepository.save(Basket);
-        return null;
+        basketId.setUserId(basketDto.getUserId());
+        basket.setBasketMovieTitle(basketDto.getBasketMovieTitle());
+        basket.setBasketUserAge(basketDto.getBasketUserAge());
+        basket.setBasketMovieNum(basketDto.getBasketMovieNum());
+
+        basketRepository.save(basket);
+    }
+    @Override
+    public void deleteBasketByBasketNo(String basketNo) {
+
     }
 }

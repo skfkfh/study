@@ -1,8 +1,10 @@
 package study.demo.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import study.demo.dto.BasketDto;
+import study.demo.entity.BasketId;
 import study.demo.service.BasketService;
 
 import java.util.List;
@@ -25,7 +27,16 @@ public class BasketController {
     }
 
     @PostMapping
-    public List<BasketDto> createBasket(@RequestBody BasketDto basketDto) {
-        return basketService.addBasketUser(basketDto);
+    public ResponseEntity<String> createBasket(@RequestBody BasketDto basketDto) {
+        basketService.addBasketMovie(basketDto);
+
+        return ResponseEntity.ok("Movie added to basket succesfully!");
+    }
+
+    @DeleteMapping
+    public ResponseEntity<String> deleteBasketByBasketNo(@RequestParam String basketNo) {
+        basketService.deleteBasketByBasketNo(basketNo);
+
+        return ResponseEntity.ok("Movie deleted from basket succesfully!");
     }
 }
