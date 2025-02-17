@@ -12,7 +12,7 @@ spring:
     show-sql: 'false'
   datasource:
     password: '12341234'
-    url: 'jdbc:mariadb://studydb.chyai4ykcd3w.eu-north-1.rds.amazonaws.com:3306/studyMovieDB'
+    url: 'jdbc:mariadb://moviedb.cb84qkue01t8.ap-northeast-2.rds.amazonaws.com:3306/pj_movie'
     driver-class-name: org.mariadb.jdbc.Driver
     username: 'admin'
 mybatis:
