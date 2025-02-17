@@ -14,8 +14,6 @@ public class Basket {
     @Column(name = "BASKET_MOVIE_TITLE")
     private String basketMovieTitle;
 
-    @Column(name = "BASKET_USER_AGE")
-    private Integer basketUserAge;
 
     @Column(name = "BASKET_MOVIE_NUM")
     private Integer basketMovieNum;

@@ -50,7 +50,6 @@ public class BasketCustomImpl implements BasketCustom {
                                 basket.id.basketNo,
                                 basket.id.userId,
                                 basket.basketMovieTitle,
-                                basket.basketUserAge,
                                 basket.basketMovieNum
                         )
                 )
@@ -67,7 +66,6 @@ public class BasketCustomImpl implements BasketCustom {
                               basket.id.basketNo,
                               basket.id.userId,
                               basket.basketMovieTitle,
-                              basket.basketUserAge,
                               basket.basketMovieNum,
                                 user.userName
                         )
