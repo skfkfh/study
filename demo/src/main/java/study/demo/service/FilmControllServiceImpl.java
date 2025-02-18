@@ -24,4 +24,16 @@ public class FilmControllServiceImpl implements FilmControllService {
         return filmControllDto;
 
     }
+
+    public FilmControllDto findFilmByCinemaNum(Integer cinemaNum) {
+        FilmControll filmControll = filmControllRepository.findByCinemaNum(cinemaNum);
+        FilmControllDto filmControllDto = new FilmControllDto(
+                filmControll.getFilmNo(),
+                filmControll.getMovieNum(),
+                filmControll.getCinemaNum(),
+                filmControll.getRoomId(),
+                filmControll.getFilmTime()
+        );
+        return filmControllDto;
+    }
 }

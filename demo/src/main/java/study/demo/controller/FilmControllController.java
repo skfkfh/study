@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import study.demo.dto.CinemaDto;
 import study.demo.dto.FilmControllDto;
 import study.demo.service.FilmControllService;
 
@@ -19,5 +20,10 @@ public class FilmControllController {
     @GetMapping("/movieNum")
     public FilmControllDto findFilmByMovieNum(@RequestParam Integer movieNum) {
         return filmControllService.findFilmByMovieNum(movieNum);
+    }
+
+    @GetMapping("/cinemaNum")
+    public FilmControllDto findFilmByCinemaNum(@RequestParam Integer cinemaNum) {
+        return filmControllService.findFilmByCinemaNum(cinemaNum);
     }
 }
