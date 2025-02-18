@@ -12,8 +12,8 @@ public class FilmControllServiceImpl implements FilmControllService {
 
     private final FilmControllRepository filmControllRepository;
 
-    public FilmControllDto findFilmByMovieId(Integer movieId) {
-        FilmControll filmControll = filmControllRepository.findByMovieId(movieId);
+    public FilmControllDto findFilmByMovieNum(Integer movieNum) {
+        FilmControll filmControll = filmControllRepository.findByMovieNum(movieNum);
         FilmControllDto filmControllDto = new FilmControllDto(
                 filmControll.getFilmNo(),
                 filmControll.getCinemaNum(),
