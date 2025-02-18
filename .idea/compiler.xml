@@ -12,7 +12,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo.demo.main" target="17" />
+      <module name="demo.demo.main~1" target="17" />
       <module name="demo.demo.test" target="17" />
+      <module name="demo.demo.test~1" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
