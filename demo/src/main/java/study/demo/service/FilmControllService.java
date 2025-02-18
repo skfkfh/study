@@ -7,4 +7,6 @@ import study.demo.dto.FilmControllDto;
 public interface FilmControllService {
 
     FilmControllDto findFilmByMovieNum(Integer movieNum);
+
+    FilmControllDto findFilmByCinemaNum(Integer cinemaNum);
 }

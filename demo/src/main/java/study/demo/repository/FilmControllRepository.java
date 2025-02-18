@@ -7,4 +7,6 @@ public interface FilmControllRepository extends JpaRepository<FilmControll, Inte
 
     FilmControll findByMovieNum(Integer movieNum);
 
+    FilmControll findByCinemaNum(Integer cinemaNum);
+
 }
