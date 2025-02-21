@@ -19,7 +19,8 @@ public class MovieServiceImpl implements MovieService{
         MovieDto movieDto = new MovieDto(
                 movie.getMovieNum(),
                 movie.getMovieTitle(),
-                movie.getMovieCost());
+                movie.getMovieCost(),
+                movie.getMovieAge());
 
         return movieDto;
     }
@@ -33,7 +34,8 @@ public class MovieServiceImpl implements MovieService{
         MovieDto movieDto = new MovieDto(
                 movie.getMovieNum(),
                 movie.getMovieTitle(),
-                movie.getMovieCost());
+                movie.getMovieCost(),
+                movie.getMovieAge());
 
         return movieDto;
     }

@@ -6,7 +6,9 @@ import study.demo.dto.FilmControllDto;
 @Service
 public interface FilmControllService {
 
-    FilmControllDto findFilmByMovieNum(Integer movieNum);
+    FilmControllDto findFilmByMovieTitle(String movieTitle);
 
     FilmControllDto findFilmByCinemaNum(Integer cinemaNum);
+
+    FilmControllDto createFilm(FilmControllDto filmControllDto);
 }
