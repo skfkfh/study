@@ -5,8 +5,8 @@ import study.demo.entity.FilmControll;
 
 public interface FilmControllRepository extends JpaRepository<FilmControll, Integer> {
 
-    FilmControll findFilmByMovieTitle(String movieTitle);
-
-    FilmControll findByCinemaNum(Integer cinemaNum);
+//    FilmControll findFilmByMovieTitle(String movieTitle);
+//
+//    FilmControll findByCinemaNum(Integer cinemaNum);
 
 }

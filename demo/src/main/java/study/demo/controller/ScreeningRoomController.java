@@ -16,8 +16,4 @@ public class ScreeningRoomController {
 
     private final ScreeningRoomService screeningRoomService;
 
-    @GetMapping("/info")
-    public List<ScreeningRoomDto> getScreeningRoomsByCinemaNum(Integer cinemaNum) {
-        return screeningRoomService.getScreeningRoomsByCinemaNum(cinemaNum);
-    }
 }

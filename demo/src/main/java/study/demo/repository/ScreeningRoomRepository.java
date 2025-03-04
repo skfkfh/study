@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface ScreeningRoomRepository extends CrudRepository<ScreeningRoom, Integer> {
 
-    List<ScreeningRoomDto> findByCinemaNum(Integer cinemaNum);
+    List<ScreeningRoom> findByCinemaNum(Integer cinemaNum);
 }

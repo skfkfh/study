@@ -26,4 +26,5 @@ public class MovieController {
     public MovieDto getMovieInfoByNo(@RequestParam Integer movieNum) {
         return movieService.getMovieInfoByNum(movieNum);
     }
+
 }

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Table(name = "filmControll")
 public class FilmControll {
 
@@ -21,20 +21,19 @@ public class FilmControll {
     private Integer filmNo;
     @Column(name = "CINEMA_NUM")
     private Integer cinemaNum;
-    @Column(name = "MOVIE_TITLE")
-    private String movieTitle;
-    @Column(name = "ROOM_NAME")
-    private String roomName;
-    @Column(name = "FILMTIME_YEARMONTH")
-    private String filmTimeYearMonth;
-    @Column(name = "FILMTIME_HOURMINUTE")
-    private String filmTimeHourMinute;
+    @Column(name = "MOVIE_NUM")
+    private Integer movieNum;
+    @Column(name = "ROOM_ID")
+    private Integer roomId;
+    @Column(name = "FILMTIME_YEAR")
+    private String filmTimeYear;
+    @Column(name = "FILMTIME_MONTH")
+    private String filmTimeMonth;
+    @Column(name = "FILMTIME_DAY")
+    private String filmTimeDay;
+    @Column(name = "FILMTIME_HOUR")
+    private String filmTimeHour;
+    @Column(name = "FILMTIME_MINUTE")
+    private String filmTimeMinute;
 
-    public FilmControll(Integer cinemaNum, String movieTitle, String roomName, String filmTimeYearMonth, String filmTimeHourMinute) {
-        this.cinemaNum = cinemaNum;
-        this.movieTitle = movieTitle;
-        this.roomName = roomName;
-        this.filmTimeYearMonth = filmTimeYearMonth;
-        this.filmTimeHourMinute = filmTimeHourMinute;
-    }
 }
