@@ -11,4 +11,5 @@ public class MovieDto {
     private Integer movieNum;
     private String movieTitle;
     private Integer movieCost;
+    private Integer movieAge;
 }

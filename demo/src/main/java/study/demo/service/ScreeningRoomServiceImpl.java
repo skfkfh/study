@@ -15,10 +15,5 @@ public class ScreeningRoomServiceImpl implements ScreeningRoomService {
 
     private final ScreeningRoomRepository screeningRoomRepository;
 
-    @Override
-    public List<ScreeningRoomDto> getScreeningRoomsByCinemaNum(Integer cinemaNum) {
-        List<ScreeningRoomDto> screeningRoom = screeningRoomRepository.findByCinemaNum(cinemaNum);
-        return screeningRoom;
-    }
 
 }

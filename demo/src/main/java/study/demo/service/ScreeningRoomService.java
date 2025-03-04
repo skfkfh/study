@@ -8,5 +8,4 @@ import java.util.List;
 @Service
 public interface ScreeningRoomService {
 
-    List<ScreeningRoomDto> getScreeningRoomsByCinemaNum(Integer cinemaNum);
 }
