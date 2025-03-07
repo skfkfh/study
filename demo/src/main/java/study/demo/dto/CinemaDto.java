@@ -11,4 +11,7 @@ public class CinemaDto {
     private String cinemaName;
     private Integer cinemaTel;
     private String cinemaAdd;
+
+    public CinemaDto(Integer cinemaNum, String cinemaName) {
+    }
 }

@@ -11,4 +11,5 @@ import java.util.List;
 @Service
 public interface MainCinemaViewService {
 
+    List<MovieDto> getMainMovieList();
 }
