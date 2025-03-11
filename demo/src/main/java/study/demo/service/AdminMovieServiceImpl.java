@@ -12,13 +12,12 @@ import study.demo.entity.FilmControll;
 import study.demo.entity.Movie;
 import study.demo.entity.ScreeningRoom;
 import study.demo.repository.CinemaRepository;
-import study.demo.repository.FilmControllRepository;
+import study.demo.repository.FilmControll.FilmControllRepository;
 import study.demo.repository.MovieRepository;
 import study.demo.repository.ScreeningRoomRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

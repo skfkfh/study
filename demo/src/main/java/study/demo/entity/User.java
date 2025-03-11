@@ -14,11 +14,14 @@ import lombok.NoArgsConstructor;
 public class User {
 
     @Id
-    @Column(name = "USER_ID")
+    @Column(name = "USER_ID", unique = true, nullable = false)
     private String userId;
 
     @Column(name = "USER_PWD")
     private String userPwd;
+
+    @Column(name = "USER_PWD_CHECK")
+    private String userPwdCheck;
 
     @Column(name = "USER_NAME")
     private String userName;
@@ -26,9 +29,16 @@ public class User {
     @Column(name = "USER_PHONE_NUM")
     private String userPhoneNum;
 
+    @Column(name = "USER_BIRTH")
+    private Integer userBirth;
+
     @Column(name = "USER_ADD")
     private String userAdd;
 
-    @Column(name = "USER_AGE")
-    private Integer userAge;
+    @Column(name = "USER_EMAIL")
+    private String userEmail;
+
+    @Column(name = "USER_SEX")
+    private String userSex;
+
 }
