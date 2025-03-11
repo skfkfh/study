@@ -19,15 +19,15 @@ public class UserBook {
     @Column(name = "USER_ID")
     private String userId;
 
-    @Column(name = "MOVIE_NUM")
-    private Integer movieNum;
-
-    @Column(name = "CINEMA_NUM")
-    private Integer cinemaNum;
-
-    @Column(name = "ROOM_ID")
-    private Integer roomId;
+    @Column(name = "FILM_NO")
+    private Integer filmNo;
 
     @Column(name = "BOOK_AMOUNT")
     private Integer bookAmount;
+
+    @Column(name = "BOOKING_HOUR")
+    private String bookingHour;
+
+    @Column(name = "BOOKING_MINUTE")
+    private String bookingMinute;
 }

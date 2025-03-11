@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import study.demo.dto.BookingDto;
 import study.demo.dto.CinemaDto;
 import study.demo.dto.MovieDto;
+import study.demo.dto.SeatChoiceDto;
 import study.demo.entity.UserBook;
 import study.demo.service.BookingService;
 
@@ -31,5 +32,11 @@ public class BookingController {
     public void bookMovie(@RequestBody BookingDto bookingDto) {
 
         bookingService.bookMovie(bookingDto);
+    }
+
+    @PostMapping("/seat")
+    public void choiceSeat(@RequestBody SeatChoiceDto seatChoiceDto) {
+
+        bookingService.choiceSeat(seatChoiceDto);
     }
 }

@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+  datasource:
+    password: '12341234'
+    url: 'jdbc:mariadb://moviedb.cb84qkue01t8.ap-northeast-2.rds.amazonaws.com:3306/pj_movie'
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: 'admin'
