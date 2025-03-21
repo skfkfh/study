@@ -1,5 +1,6 @@
 package study.demo.dto;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -35,5 +36,8 @@ public class UserSignUpDto {
     }
 
     public UserSignUpDto(String userName, String userId, String userPwd, Integer userBirth, String userPhoneNum, String userAdd, String userEmail, String userSex) {
+    }
+
+    public UserSignUpDto(String userName, String userId, Integer userBirth, String userPhoneNum, String userAdd, String userEmail, String userSex) {
     }
 }

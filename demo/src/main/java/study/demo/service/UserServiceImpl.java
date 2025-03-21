@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService {
         UserSignUpDto userDto = new UserSignUpDto(
                 user.getUserName(),
                 user.getUserId(),
-                user.getUserPwd(),
                 user.getUserBirth(),
                 user.getUserPhoneNum(),
                 user.getUserAdd(),
