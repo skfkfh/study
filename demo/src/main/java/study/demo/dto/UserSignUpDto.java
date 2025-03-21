@@ -37,4 +37,7 @@ public class UserSignUpDto {
 
     public UserSignUpDto(String userName, String userId, String userPwd, Integer userBirth, String userPhoneNum, String userAdd, String userEmail, String userSex) {
     }
+
+    public UserSignUpDto(String userName, String userId, Integer userBirth, String userPhoneNum, String userAdd, String userEmail, String userSex) {
+    }
 }
